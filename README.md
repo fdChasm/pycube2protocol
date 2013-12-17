@@ -1,0 +1,1 @@
+This library provides tools for easily reading and writing Cube 2 message streams.
