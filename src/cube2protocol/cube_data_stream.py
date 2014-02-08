@@ -142,3 +142,6 @@ class CubeDataStream(object):
             return str(self.read(self.data.index(chr(0)), peek))
         finally:
             self.read(1, peek)  # Throw away the null terminator
+
+    def tobytes(self):
+        return bytes(self.data)

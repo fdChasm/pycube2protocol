@@ -25,6 +25,12 @@ sauerbraten_stream_spec.add_message_type(message_types.N_SERVINFO, mt)
 mt = MessageType("N_WELCOME")
 sauerbraten_stream_spec.add_message_type(message_types.N_WELCOME, mt)
 
+mt = MessageType("N_AUTHCHAL",
+        Field(name="desc", type="string"),
+        Field(name="auth_id", type="int"),
+        Field(name="challenge", type="string"))
+sauerbraten_stream_spec.add_message_type(message_types.N_AUTHCHAL, mt)
+
 mt = MessageType("N_PONG",
         Field(name="cmillis", type="int"))
 sauerbraten_stream_spec.add_message_type(message_types.N_PONG, mt)
